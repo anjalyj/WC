@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class wcTest{
+public class WCTest{
 
   @Test
   public void lineCount_returns_the_number_of_lines(){
@@ -23,5 +23,26 @@ public class wcTest{
       WordCount wc = new WordCount();
       assertEquals(1,wc.lineCount(text));
   }
+  @Test
+  public void wordCount_counts_number_of_words_in_a_single_line(){
+    String text =  "asdf asdff asdfggh";
+    WordCount wc = new WordCount();
+    assertEquals(3,wc.wordCount(text));
 
+  }
+
+  @Test
+  public void wordCount_counts_number_of_words_of_multiple_lines(){
+    String text="asdf asdff\nasdfg\nasd asdfggh";
+    WordCount wc = new WordCount();
+    assertEquals(5,wc.wordCount(text));
+  }
+
+  @Test
+  public void countWords_counts_number_of_words_of_multiple_lines_with_tabs_and_returns(){
+    String text="asdf asdff\r\nasdfg\r\nasd\tasdfggh";
+    WordCount wc = new WordCount();
+    assertEquals(5,wc.wordCount(text));
+  }
+  
 }
