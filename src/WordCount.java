@@ -4,7 +4,7 @@ class WordCount{
    int lines = text.split("\n").length;
    return (lines);
  }
- 
+
  public int wordCount(String text){
    String[] words = text.split("\\s+");
    int count=0;
@@ -13,5 +13,14 @@ class WordCount{
       count++;
    }
    return count;
+ }
+
+ public int characterCount(String text){
+   return text.length();
+ }
+
+ public int byteCount(String text){
+   byte[] bytes = text.getBytes();
+   return bytes.length;
  }
 }
