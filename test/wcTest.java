@@ -19,9 +19,9 @@ public class WCTest{
 
   @Test
   public void lineCount_counts_the_number_of_lines_of_a_single_lined_file(){
-      String text="asdfghqwertsdfghjasdfghjsdfghjhertdfgh";
-      WordCount wc = new WordCount();
-      assertEquals(1,wc.lineCount(text));
+    String text="asdfghqwertsdfghjasdfghjsdfghjhertdfgh";
+    WordCount wc = new WordCount();
+    assertEquals(1,wc.lineCount(text));
   }
   @Test
   public void wordCount_counts_number_of_words_in_a_single_line(){
