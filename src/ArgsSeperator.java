@@ -10,10 +10,9 @@ class ArgsSeperator {
     public String[] getFiles() {
         String files[] = new String[args.length];
         int index = 0;
-        for (String arg : args) {
+        for (String arg : args)
             if (!isValidOption(arg))
                 files[index++] = arg;
-        }
         return files;
     }
 
